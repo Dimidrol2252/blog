@@ -1,41 +1,46 @@
 <html>
-	<head>
-		<meta name="viewport" content="width=device-width,initial-scale=1.0">
+	<head> 
 	</head>
-	<body>
-		<h2>MyBlog</h2>
-		<h4>Articles</h4>
-		<div id="root" ></div>
+	<body> 
+	
+		<h2>MyBlog</h2> 
+		<h4>MyArticles</h4> 
+		<div id='root'></div>
+	
+	
 		<script>
 			var articles = [
 				{
-					title: 'Article 1',
-					link: 'test1.html'
+					title: 'Article1',
+					linc: 'article1.html'
 				},
 				{
-					title: 'Article 2',
-					link: 'test2.html'
+					title: 'Article2',
+					linc: 'article2.html'
 				},
 			]
 			
-			var blog = '<ul>',  
-			article,  
-			amountOfArticles = articles.length
+			var blog = '<ul>';
+			var article;
+			var amountOfArticles = articles.length;
 			
 			for (article = 0; article < amountOfArticles; article++)
 			{
 				blog += `
-					<li> 
-						<a href="${articles[article].link}"> 
-							<h3>${articles[article].title}</h3> 
-						</a> 
-					</li>`
+				<li>
+					<a href="${articles[article].linc}">
+						<h3>${articles[article].title}</h3>
+					</a>
+				</li>
+				`
 			}
-
-			blog += '</ul>'
-			var root = document.querySelector('#root')
-			root.innerHTML = blog
+			blog += '</ul>';
+			
+			var root = document.querySelector('#root');
+			root.innerHTML = blog;
 		</script>
 		
+	
+	
 	</body>
 </html>
